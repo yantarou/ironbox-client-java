@@ -3,3 +3,10 @@
 #################
 target
 
+#################
+## API properties
+#################
+prod-loadbalancer-api.properties
+prod-server1-api.properties
+prod-server2-api.properties
+staging-api.properties
