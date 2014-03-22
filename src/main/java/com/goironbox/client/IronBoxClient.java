@@ -63,11 +63,22 @@ public class IronBoxClient {
         );
     }
 
+    /**
+     * Sets the API base URL.
+     * 
+     * @param apiBaseUrl The API base URL.
+     * @throws Exception 
+     */
+    public void setAPIBaseURL(String apiBaseUrl) throws Exception {
+        rh.setAPIBaseURL(apiBaseUrl);
+    }
+
     private boolean uploadBlobWithSharedAccessSignatureUri(File localFile, URI sasURI) throws Exception {
         return rh.uploadBlobWithSharedAccessSignatureUri(localFile, sasURI);
     }
 
     /**
+     * Uploads a file to a container.
      * 
      * @param containerID A 64-bit integer container ID.
      * @param srcFile File to upload.
