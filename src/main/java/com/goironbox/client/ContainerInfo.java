@@ -7,13 +7,13 @@ package com.goironbox.client;
  */
 public class ContainerInfo {
 
-    private final String containerID;
+    private final Long containerID;
     private final String containerName;
     
     private ContainerInfo(String jsonString) {
         JSONObject jo = new JSONObject(jsonString);
        
-        containerID = jo.get("ContainerID").toString();
+        containerID = Long.parseLong(jo.get("ContainerID").toString());
         containerName = jo.get("ContainerName").toString();
     }
 
@@ -26,7 +26,7 @@ public class ContainerInfo {
      * 
      * @return the container's ID
      */
-    public String getContainerID() {
+    public Long getContainerID() {
         return containerID;
     }
 
